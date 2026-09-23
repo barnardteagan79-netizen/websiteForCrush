@@ -1,0 +1,122 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body
+{
+    overflow-x: hidden;
+
+}
+.slider
+{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    gap: 10vh;
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid green;
+}
+
+.slider h1
+{
+    color: transparent;
+
+    background-image: linear-gradient(90deg,rgb(123, 195, 207), rgb(58, 218, 164));
+    background-clip: text;
+
+    text-align: center;
+    border: 1px solid blue;
+    position: absolute;
+    width: 100%;
+
+    font-family: system-ui;
+    font-size: 4rem;
+    font-weight: 100;
+}
+
+.slider button
+{
+    position: absolute;
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    bottom: calc(50% - 25px);
+}
+
+.slide
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    /* position: relative; */
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    /* display: flex; */
+    z-index: -1;
+}
+
+.slide h2
+{
+    position: relative;
+    top: 20%;
+    left: 16%;
+    font-size: 2rem;
+    color: white;
+    font-family: monospace;
+}
+
+.slide:nth-child(1)
+{
+    background-image: url('herEye.jpg');
+}
+
+.slide:nth-child(2)
+{
+    background-image: url('loveThoughts.jpg');
+}
+
+.slide:nth-child(3)
+{
+    background-image: url('MyFeelings.jpg');
+}
+
+.slide:nth-child(4)
+{
+    background-image: url('subMentalThinking.jpg');
+}
+
+.Show
+{
+    display: block;
+    background-image: radial-gradient(rgba(158, 90, 90, 0), rgba(29, 29, 29, 0.336));
+}
+
+
+.Show::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(rgba(56, 47, 47, 0.281), rgb(39, 39, 39));
+    pointer-events: none;
+}
+
+#prevBtn
+{
+    border: 1px solid red;
+    right: 3%;
+}
+
+#nextBtn
+{
+    left: 3%;
+}
